@@ -1,7 +1,6 @@
 echo "enter name of user"
 read name
-c = $ ( who|grep -ci $name)
-if [$c -gt 0]
+if ( who|grep -w $name )
 then
 echo "user is logged into the system"
 else
